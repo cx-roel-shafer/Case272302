@@ -1,0 +1,28 @@
+version: 1
+
+# checkmarx-specific related configuration, as stated in https://docs.checkmarx.com/en/34965-68549-configuring-projects-using-config-as-code-files.html
+# every value in this section is optional
+checkmarx:
+  # configure the checkmarx scan parameters for scanning this specific project
+  scan:
+    # configure the checkmarx scan configurations for scanning this specific project
+    configs:
+      # configure the SAST related configurations this specific project
+      sast:
+        # configure the SAST preset name used for this specific project
+        presetName: 'ASA Premium'
+        fastScanMode: 'false'
+        # configure if this specific project will be run incrementally or will it run a full scan
+        incremental: 'false'
+        languageMode: 'primary'
+        filter: '!/*/cigna/,!/KeyToss/Resources/Images,!/KeyToss/Resources/Fonts'
+        engineVerbose: 'false'
+      sca:
+        filter: ''
+        exploitablePath: 'false'
+        lastSastScanTime: '1'
+      kics:
+        filter: ''
+        platforms: ''
+      apisec:
+        swaggerFilter: ''
