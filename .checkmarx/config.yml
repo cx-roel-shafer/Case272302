@@ -15,7 +15,7 @@ checkmarx:
         # configure if this specific project will be run incrementally or will it run a full scan
         incremental: 'false'
         languageMode: 'primary'
-        filter: '!/*/cigna/,!/KeyToss/Resources/Images,!/KeyToss/Resources/Fonts'
+        filter: '!**/cigna/**,!**/Resources/Images/*,!**/Resources/Fonts/*'
         engineVerbose: 'false'
       sca:
         filter: ''
